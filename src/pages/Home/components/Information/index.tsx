@@ -7,7 +7,7 @@ import {
   ItemContainer,
   ItemsListContainer,
 } from './styles'
-import splashImage from '../../assets/coffee-splash.svg'
+import splashImage from '../../../../assets/coffee-splash.svg'
 
 export function Information() {
   return (

@@ -2,15 +2,21 @@ import { HeaderContainer, NavigationContainer } from './styles'
 import coffeLogo from '../../assets/coffee-logo.svg'
 import { LocationButton } from './LocationButton'
 import { CartButton } from './CartButton'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={coffeLogo} alt="" />
+      <NavLink to="/" title="Início">
+        <img src={coffeLogo} alt="" />
+      </NavLink>
 
       <NavigationContainer>
         <LocationButton />
-        <CartButton />
+
+        <NavLink to="/success" title="Carrinho">
+          <CartButton />
+        </NavLink>
       </NavigationContainer>
     </HeaderContainer>
   )

@@ -8,7 +8,7 @@ import {
   ValueContainer,
 } from './styles'
 
-import coffeeImg from '../../assets/coffees/expresso.svg'
+import coffeeImg from '../../../../assets/coffees/expresso.svg'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 
 export function List() {
@@ -26,7 +26,7 @@ export function List() {
             <span>TRADICIONAL</span>
 
             <strong>Expresso Tradicional</strong>
-            <p>Expresso diluído, menos intenso que o tradicional tradicionaltradicionaltradicionaltradicionaltradicionaltradicionaltradicional</p>
+            <p>Expresso diluído, menos intenso que o tradicional</p>
           </InformationCoffeeContainer>
           <BuyContainer>
             <ValueContainer>
