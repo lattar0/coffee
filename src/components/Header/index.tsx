@@ -14,7 +14,7 @@ export function Header() {
       <NavigationContainer>
         <LocationButton />
 
-        <NavLink to="/success" title="Carrinho">
+        <NavLink to="/checkout" title="Carrinho">
           <CartButton />
         </NavLink>
       </NavigationContainer>
