@@ -9,26 +9,26 @@ import {
 import {
   ActionsContainer,
   AddressFormContainer,
+  AddressFormSeparator,
+  BaseCardContainer,
   BillingOptionsContainer,
   CheckoutContainer,
   CoffeeCard,
   CoffeeSelectedContainer,
-  Counter,
   DetailsContainer,
   InfoContainer,
   Label,
-  OrderFormContainer,
-  SelectedCoffeesContainer,
   SmallButton,
 } from './styles'
 import { Select } from './Select'
 
-import coffeeImg from '../../assets/coffees/expresso.svg'
+import { Input } from '../../components/Input'
+import { Counter } from '../../components/Counter'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <OrderFormContainer>
+      <BaseCardContainer>
         <h1>Complete seu pedido</h1>
         <CoffeeCard>
           <Label backgroundIconColor="yellow">
@@ -40,13 +40,17 @@ export function Checkout() {
           </Label>
 
           <AddressFormContainer>
-            <input placeholder="CEP" />
-            <input placeholder="Rua" />
-            <input placeholder="Número" />
-            <input placeholder="Complemento" />
-            <input placeholder="Bairro" />
-            <input placeholder="Cidade" />
-            <input placeholder="UF" />
+            <Input size="normal" placeholder="CEP" />
+            <Input placeholder="Rua" />
+            <AddressFormSeparator>
+              <Input size="normal" placeholder="Número" />
+              <Input placeholder="Complemento" isOptional={true} />
+            </AddressFormSeparator>
+            <AddressFormSeparator>
+              <Input size="normal" placeholder="Bairro" />
+              <Input placeholder="Cidade" />
+              <Input size="small" placeholder="UF" />
+            </AddressFormSeparator>
           </AddressFormContainer>
         </CoffeeCard>
 
@@ -76,12 +80,13 @@ export function Checkout() {
             </Select>
           </BillingOptionsContainer>
         </CoffeeCard>
-      </OrderFormContainer>
+      </BaseCardContainer>
 
-      <SelectedCoffeesContainer>
+      <BaseCardContainer>
+        <h1>Cafés selecionados</h1>
         <CoffeeSelectedContainer>
           <InfoContainer>
-            <img src={coffeeImg} alt="" />
+            <img src={`/coffees/chocolate-quente.svg`} alt="" />
             <DetailsContainer>
               <span>Expresso Tradicional</span>
               <ActionsContainer>
@@ -91,7 +96,7 @@ export function Checkout() {
             </DetailsContainer>
           </InfoContainer>
         </CoffeeSelectedContainer>
-      </SelectedCoffeesContainer>
+      </BaseCardContainer>
     </CheckoutContainer>
   )
 }

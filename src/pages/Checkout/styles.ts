@@ -6,7 +6,7 @@ export const CheckoutContainer = styled.div`
   justify-content: center;
 `
 
-export const OrderFormContainer = styled.div`
+export const BaseCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,12 +63,25 @@ export const Label = styled.div<BackgroundProps>`
 export const AddressFormContainer = styled.form`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
   input {
     border: 0;
   }
 `
-export const SelectedCoffeesContainer = styled.div``
+
+export const AddressFormSeparator = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.75rem;
+`
+
+export const SelectedCoffeesContainer = styled.div`
+  background: ${({ theme }) => theme['base-card']};
+  padding: 2.5rem;
+  border-radius: 6px 44px;
+`
 
 export const CoffeeSelectedContainer = styled.div``
 

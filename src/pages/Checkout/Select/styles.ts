@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
-export const SelectContainer = styled.div`
+export const SelectContainer = styled.button`
   display: flex;
+  border: 0;
+  cursor: pointer;
   flex-direction: row;
   justify-content: center;
   align-items: center;
